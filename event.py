@@ -79,8 +79,4 @@ def day1(r):
     else:
         print("test")
 def day2(r):
-<<<<<<< HEAD
     print("Test")
-=======
-    print("Test")
->>>>>>> 951974481f301870bb6d7c9c7d9ac4f306e47ddb
