@@ -1,9 +1,10 @@
 import random as rd
-# q1, q2, q3 모두 1로 만드는 조건 있어야함
+# q1 = 무전기, q2 = 보존식량, q3 = 총 모두 1로 만드는 조건 있어야함
 
 def day1(r):
     global hp, san
     global q1, q2, q3
+    # 랜덤 1일때
     if r == 1:
         # print문하고 input문으로 문자 출력하고 선택지 제시해서 그에따른 결과 출력하도록 작성
         # 세미 아포칼립스이니 그에 맞는 지문
@@ -52,6 +53,7 @@ def day1(r):
                             san += 1
             else:
                 print("오늘은 빈손이다")
+    # 랜덤 2일떄
     elif r == 2:
         print("야생 동물을 만났다")
         ans = int(input('1: 도망간다 2: 싸운다 3: 먹을 것을 준다    '))
@@ -76,6 +78,28 @@ def day1(r):
                 print('날 먹잇감으로 착각했다')
                 hp = 0
                 san = 0
+    # 랜덤 3일때
+    else:
+        print('피곤함이 몰려온다')
+        ans = int(input('1: 졸음을 참는다 2: 잔다'))
+        if ans == 1:
+            if rd.randint(1, 10) <= 5:
+                print('정신이 몽롱하다. 정신력 하락 1')
+                san -= 1
+            else:
+                print('아무일도 일어나지 않았다.')
+        if ans == 2:
+            if rd.randint(1, 20) < 6:
+                print('잠든 사이 식량을 도둑맞았다. 체력 하락 1')
+                hp -= 1
+            elif rd.randint(1, 20) >= 6 and rd.randint(1, 20) < 19:
+                print('몸이 개운해졌다. 체력 상승 1')
+                if hp <3:
+                    hp += 1
+            else:
+                print('눈을 뜨니 내 방이다. 그렇다 꿈이였다.. 히든엔딩')
+                exit(0)
+
     else:
         print("test")
 def day2(r):
