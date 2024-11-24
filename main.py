@@ -23,7 +23,7 @@ for i in range(1, 8):
     if i <= 3:
         ev.event1(rd.randint(1, 3)) # randint(n, m) n에서 m사이의 정수 반환
     else:
-        ev.event2(rd.randint(1, 2))
+        ev.event2(rd.randint(1, 3))
     if ev.hp == 0 or ev.san == 0:
         print("여기까지인듯 하다...")
         print("당신은 죽었습니다")
@@ -61,7 +61,7 @@ for i in range(1, 8):
             if ev.q3:
                 ans = int(input("1: 총을 쏜다 2: 총을 쏘지 않는다   "))
                 if ans == 1:
-                    if rd.randint(1, 10) > 5:
+                    if rd.randint(1, 10) > 2:
                         print("총알은 행운인지 불행인지 강도에게 명중했습니다. 당신은 바뀐 세상에 한발자국 더 적응했습니다")
                         print("Ending n.7")
                     else:

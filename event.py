@@ -38,7 +38,7 @@ def event1(r):
             else:
                 print("오늘은 빈손이다")
         else:
-            if rd.randint(1, 10) > 8:
+            if rd.randint(1, 10) > 2:
                 print("이상한 여자를 만났다")
                 ans2 = int(input("1: 말을 건다 2: 공격한다 3: 무시한다  "))
                 if ans2 == 1:
@@ -117,7 +117,7 @@ def event2(r):
         if ans == 1:
             print('갑자기 조용해지더니 긴장감이 맴돈다. 급하게 밖으로 뛰어나왔다')
         elif ans == 2:
-            if rd.randint(1, 10) <= 8:
+            if rd.randint(1, 10) <= 9:
                 print('집에 사람은 없고 약간의 식량만 있었다. 체력 상승 1')
                 if hp < 3:
                     hp += 1
@@ -125,7 +125,7 @@ def event2(r):
                 print('문에는 부비트랩이 설치되어 있었다.. 사망')
                 hp = 0
         else:    
-            if rd.randint(1, 10) <= 8:
+            if rd.randint(1, 10) <= 9:
                 print('옥상은 잠겨있어 들어갈 수 없다.')
             else:
                 print('로제와 브루노 마스가 옥상에 있었다. 아파트~ 아파트~ 히든 엔딩')
@@ -138,8 +138,9 @@ def event2(r):
             if san < 3:
                     san += 1
         elif ans == 2:
-            if rd.randint(1, 3) > 2:
+            if rd.randint(1, 3) > 1:
                 print("식료품 가판대 사이에서 보존식품을 찾았다")
+                q2 = 1
             else:
                 print("아무것도 찾지 못했다")
         else:
@@ -184,7 +185,7 @@ def event2(r):
         print("버려진 창고를 발견했다")
         ans = int(input("1: 들어간다 2: 무시한다    "))
         if ans == 1:
-            if rd.randint(1, 10) > 7:
+            if rd.randint(1, 10) > 3:
                 print("총과 총알 3발을 찾았다. ")
                 q3 = 1
             else:
