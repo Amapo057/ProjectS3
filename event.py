@@ -1,6 +1,17 @@
 import random as rd
 # q1 = 무전기, q2 = 보존식량, q3 = 총 모두 1로 만드는 조건 있어야함
 
+# 상태 설정
+hp = 3
+san = 3
+die = 0
+
+# 엔딩 조건
+q1 = 0
+q2 = 0
+q3 = 0
+
+
 def day1(r):
     global hp, san
     global q1, q2, q3
@@ -94,13 +105,11 @@ def day1(r):
                 hp -= 1
             elif rd.randint(1, 20) >= 6 and rd.randint(1, 20) < 19:
                 print('몸이 개운해졌다. 체력 상승 1')
-                if hp <3:
+                if hp < 3:
                     hp += 1
             else:
                 print('눈을 뜨니 내 방이다. 그렇다 꿈이였다.. 히든엔딩')
                 exit(0)
-
-    else:
-        print("test")
-def day2(r):
-    print("Test")
+def day2(r, point):
+    if point == 1:
+        print(" ")
