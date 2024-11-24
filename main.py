@@ -22,13 +22,8 @@ for i in range(1, 8):
     # 현재 날짜가 3일 이하일 시 event1함수 작동
     if i <= 3:
         ev.event1(rd.randint(1, 3)) # randint(n, m) n에서 m사이의 정수 반환
-    elif i >=4 and i <= 5:
-        ev.event2(rd.randint(1, 2))
     else:
-        ev.event3()
-    # 현재 날짜가 4 이상일 시 event2 작동
-    #else:
-    #   ev.event2(rd.randint(1, 3))
+        ev.event2(rd.randint(1, 2))
     if ev.hp == 0 or ev.san == 0:
         print("여기까지인듯 하다...")
         print("당신은 죽었습니다")
